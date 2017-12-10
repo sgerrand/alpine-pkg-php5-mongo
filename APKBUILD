@@ -3,7 +3,7 @@
 pkgname=php5-mongo
 _pkgrealname=mongo
 _pkgsrcname=mongo-php-driver-legacy
-pkgver=1.6.14
+pkgver=1.6.15
 pkgrel=0
 pkgdesc="MongoDB driver for PHP 5"
 url="https://github.com/mongodb/$_pkgsrcname"
@@ -56,6 +56,4 @@ doc() {
 	done
 }
 
-md5sums="d76bd379135d2d9269c43be0406d050b  php5-mongo-1.6.14.tar.gz"
-sha256sums="4c64c53f334760f18861935bfa4b695c51c662e64dbedfef94e908974bf06aca  php5-mongo-1.6.14.tar.gz"
-sha512sums="3ffb0f181141467894f0315ec1536bb14fbda9861e45ef93802366bc907972b48727f5bef9fb8a8d121743b43036782a225e0a034a5d97c471b3188dbe57e01b  php5-mongo-1.6.14.tar.gz"
+sha512sums="afd92669c410d58c99e3e6d9ad776552b6161efbcfff69768029eab2bba158be9cd96d69acb7464d502051bbc28192dee20e4624f5d42ea7f6b2e613f1b46bf9  php5-mongo-1.6.15.tar.gz"
