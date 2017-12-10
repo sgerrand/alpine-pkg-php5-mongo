@@ -13,11 +13,11 @@ dependencies:
     - mkdir packages
     - echo -e "$RSA_PUBLIC_KEY" > packages/sgerrand.rsa.pub
   override:
-    - docker run -e RSA_PRIVATE_KEY="$RSA_PRIVATE_KEY" -e RSA_PRIVATE_KEY_NAME="sgerrand.rsa" -v $(pwd):/home/builder/package -v $(pwd)/packages:/home/builder/packages sgerrand/alpine-abuild:3.4
+    - docker run -e RSA_PRIVATE_KEY="$RSA_PRIVATE_KEY" -e RSA_PRIVATE_KEY_NAME="sgerrand.rsa" -v $PWD:/home/builder/package -v $PWD/packages:/packages sgerrand/alpine-abuild:v3
 
 test:
   override:
-    - docker run -it -v $(pwd)/packages:/packages alpine:3.4 sh -c "cp /packages/sgerrand.rsa.pub /etc/apk/keys/ && apk -U add --no-progress --upgrade /packages/builder/x86_64/*.apk"
+    - docker run -it -v $(pwd)/packages:/packages alpine:3.5 sh -c "cp /packages/sgerrand.rsa.pub /etc/apk/keys/ && apk -U add --no-progress --upgrade /packages/builder/x86_64/*.apk"
 
 deployment:
   release:
